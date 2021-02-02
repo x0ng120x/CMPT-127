@@ -26,7 +26,7 @@ int main(void) {
         count++;
     }
 
-    printf("%.2f %.2f %.2f", min, max, sum/count);
+    printf("%.2f %.2f %.2f\n", min, max, sum/count);
     
     return 0;
 }
