@@ -16,7 +16,7 @@ int main(void) {
                 if(j==1 || j==width) {
                     printf("#");
                 }
-                else {
+                else { 
                     printf(".");
                 }
             }

@@ -10,11 +10,11 @@ int main(void) {
 
     scanf("%f %d %f", &x, &breadth, &z);
 
-    for (int j=z-1; j>=0; j--) {
+    for (float j=z-1; j>=0; j--) {
         x1 = floor(j*(x/(2.0*z)));
         x2 = ceil((x-1) + (-j)*(x/(2.0*z)));
 
-        for (int i=0; i<x; i++) {
+        for (float i=0; i<x; i++) {
             if (j == 0) {
                 printf("#");
             }
