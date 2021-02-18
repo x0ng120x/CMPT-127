@@ -9,19 +9,3 @@ void reverse(int arr[], unsigned int len) {
       arr[len - (i+1)] = temp;
   }
 }
-
-int main( void )
-{
-  int intArray[] = {11, 12, 13, 14};
-  unsigned int len = 4;
- 
-  reverse( intArray, len );
- 
-  for( unsigned int i = 0; i < len; i++ )
-  {
-     printf( "%d ", intArray[i] );
-  }
-  printf( "\n" );
- 
-  return 0;
-}
