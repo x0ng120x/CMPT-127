@@ -11,25 +11,32 @@ int main() {
   unsigned long int charcount = 0;
   unsigned long int wordcount = 0;
   unsigned long int linecount = 0;
+  int truecount = -1;
   char c;
 
   while (1) {
     c = getchar();
     if (c == EOF)
       break;
-  
-    charcount++;
-    if (c == '\n' || c == ' ' || c == '-') {
+
+    if (wordChar(c) == 1) {
+      charcount++;
+      truecount = 1;
+    }
+    else if (wordChar(c) == 0 && truecount == 1) {
+      charcount++;
       wordcount++;
+      truecount = -1;
+    }
+    else if (wordChar(c) == 0 && truecount == -1) {
+      charcount++;
     }
 
     if (c == '\n') {
       linecount++;
     }
 
-
   } 
-
   printf("%lu %lu %lu\n", charcount, wordcount, linecount);
   return 0;
 }
